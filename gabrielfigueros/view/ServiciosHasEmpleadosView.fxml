@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gabrielfigueros.controller.ServiciosHasEmpleadosController">
+   <children>
+      <ImageView fitHeight="402.0" fitWidth="633.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FONDO%20SERVICIOS%20HAS%20EMPLEADO.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="44.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#Return" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/REGRESAR.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="125.0" layoutY="15.0" text="Servicios Has Empleados" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="38.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="56.0" layoutY="340.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="41.0" prefWidth="87.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEliminar" layoutX="205.0" layoutY="340.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="41.0" prefWidth="87.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEditar" layoutX="357.0" layoutY="340.0" mnemonicParsing="false" onAction="#editar" prefHeight="41.0" prefWidth="87.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnReporte" layoutX="496.0" layoutY="340.0" mnemonicParsing="false" onAction="#reporte" prefHeight="41.0" prefWidth="87.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TableView fx:id="tblServiciosYEmpleados" layoutX="40.0" layoutY="195.0" onMouseClicked="#seleccionarElemento" prefHeight="138.0" prefWidth="552.0">
+        <columns>
+          <TableColumn fx:id="colCodServiciosYEmpleados" prefWidth="61.0" text="ID HAS" />
+          <TableColumn fx:id="colFechaEvento" prefWidth="95.0" text="Fecha" />
+            <TableColumn fx:id="colHoraEvento" prefWidth="94.0" text="Hora" />
+            <TableColumn fx:id="colLugarEvento" prefWidth="135.0" text="Lugar" />
+            <TableColumn fx:id="colCodServicio" text="ID Servicios" />
+            <TableColumn fx:id="colCodEmpleado" prefWidth="86.0" text="ID Empleados" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <TextField fx:id="txtCodServiciosYempleados" layoutX="155.0" layoutY="71.0" promptText="ID" />
+      <TextField fx:id="txtHoraEvento" layoutX="155.0" layoutY="112.0" promptText="Hora, Ej: 12:00:00" />
+      <TextField fx:id="txtLugarEvento" layoutX="155.0" layoutY="156.0" promptText="Ingresa lugar del Servicio" />
+      <ComboBox fx:id="cmbCodServicio" layoutX="444.0" layoutY="71.0" prefHeight="25.0" prefWidth="160.0" promptText="Selecciona ID Servicio">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <ComboBox fx:id="cmbCodEmpleado" layoutX="444.0" layoutY="112.0" prefWidth="150.0" promptText="Selecciona ID Empleados">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <GridPane fx:id="grpFechaEvento" layoutX="446.0" layoutY="154.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </GridPane>
+      <Label fx:id="lblcodServiciosYEmpleados" layoutX="56.0" layoutY="71.0" text="ID HAS" textFill="#bc0303">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="114.0" text="Hora" textFill="#bc0303">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="158.0" text="Lugar" textFill="#bc0303">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="317.0" layoutY="73.0" text="ID Servicios" textFill="#bc0303">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="317.0" layoutY="114.0" text="ID Empleados" textFill="#bc0303">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="317.0" layoutY="158.0" text="Fecha" textFill="#bc0303">
+         <font>
+            <Font name="Britannic Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

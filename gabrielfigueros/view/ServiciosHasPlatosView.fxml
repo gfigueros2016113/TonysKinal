@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gabrielfigueros.controller.ServiciosHasPlatosController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FONDO%20SERVICIOS%20HAS%20PLATOS.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="51.0" layoutY="39.0" text="SERVICIOS HAS PLATOS" textFill="#80ffdf">
+         <font>
+            <Font name="Britannic Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="48.0" fitWidth="43.0" layoutX="8.0" layoutY="6.0" onMouseClicked="#Return" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/REGRESAR.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TableView fx:id="tblServiciosYPlatos" layoutX="140.0" layoutY="226.0" onMouseClicked="#seleccionarElemento" prefHeight="144.0" prefWidth="321.0">
+        <columns>
+          <TableColumn fx:id="colCodServicio" prefWidth="157.0" text="ID Servicios" />
+          <TableColumn fx:id="colCodPlato" prefWidth="163.0" text="ID Platos" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <ComboBox fx:id="cmbCodServicio" layoutX="280.0" layoutY="123.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <ComboBox fx:id="cmbCodPlato" layoutX="280.0" layoutY="175.0" prefWidth="150.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Label layoutX="157.0" layoutY="127.0" text="Servicios" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="157.0" layoutY="179.0" text="Platos" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

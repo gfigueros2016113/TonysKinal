@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresasGF" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="00449748-b795-4e89-a0d8-c59364991d5a">
+	<property name="ireport.zoom" value="1.1000000000000023"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="25"/>
+	<queryString>
+		<![CDATA[call Sp_Listar_Empresas]]>
+	</queryString>
+	<field name="codigoEmpresas" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="127" y="45" width="100" height="20" uuid="4f26ea88-e004-47e4-ae19-b5d6b2221fd4"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="14" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tony´s KINAL]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="11" y="8" width="85" height="74" isPrintInFirstWholeBand="true" uuid="b303b0c3-95e3-4fef-bfd0-2152d9808984"/>
+				<imageExpression><![CDATA["C:\\Users\\gabri\\OneDrive\\Documentos\\NetBeansProjects\\TonysKinalIN5BM2016113\\src\\org\\gabrielfigueros\\img\\LOGO REPORTE.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="79" uuid="e9d96117-6369-4d79-ac0b-544ed8822921"/>
+				<imageExpression><![CDATA["C:\\Users\\gabri\\OneDrive\\Documentos\\NetBeansProjects\\TonysKinalIN5BM2016113\\src\\org\\gabrielfigueros\\img\\REPORTE ARRIBA.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="127" y="0" width="329" height="35" uuid="a9a0e881-a05a-4a22-8d0b-e4afe654db05"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="30" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE EMPRESAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="9" width="562" height="23" backcolor="#FF00FF" uuid="c7b5a62f-fd37-4724-951a-d5e5160eefac"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="12" width="100" height="20" uuid="498f501b-7e84-4e49-8014-39518be0fe8d"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Código Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="12" width="100" height="20" uuid="f5de70d3-0608-4639-91aa-ba085d1a8f5a"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="12" width="100" height="20" uuid="74e2c9c0-e3b9-4d65-bd14-aa9bde3b136a"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="12" width="100" height="20" uuid="ecc0e507-8f13-4a23-96b7-84136e941958"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="151" y="0" width="100" height="20" uuid="64d32e7f-d4dd-4007-8122-c566ce9f98a6"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="298" y="0" width="100" height="20" uuid="416be505-a746-42e7-ab70-62a5ac825206"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="0" width="100" height="20" uuid="daa51fee-7dd4-437f-b018-bfa6a249be56"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="11" y="0" width="100" height="20" uuid="80eb9629-f3a2-480f-922f-b6ff66e69c58"/>
+				<textFieldExpression><![CDATA[$F{codigoEmpresas}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="8" y="30" width="544" height="1" uuid="838ada6d-52f8-4613-8937-07e8252fc0ba"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="85" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="3" width="572" height="82" uuid="23fd3a9a-7385-4807-9911-33ef2ec69e9a"/>
+				<imageExpression><![CDATA["C:\\Users\\gabri\\OneDrive\\Documentos\\NetBeansProjects\\TonysKinalIN5BM2016113\\src\\org\\gabrielfigueros\\img\\REPORTE ABAJO.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gabrielfigueros.controller.UnionController">
+   <children>
+      <ImageView fitHeight="410.0" fitWidth="657.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FONDO%20UNION.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="121.0" layoutX="65.0" layoutY="147.0" onMouseClicked="#ServiciosHasPlatos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/IconoServicioHasPlatos.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="126.0" layoutX="286.0" layoutY="135.0" onMouseClicked="#ServiciosHasEmpleados" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/IconoServicioHasEmpleado.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="173.0" layoutX="459.0" layoutY="158.0" onMouseClicked="#ProductosHasPlatos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/IconoProductosHasPlatos.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="125.0" layoutY="36.0" text="Entidades de Union" textFill="#a6ffcb">
+         <font>
+            <Font name="Britannic Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="274.0" text="Servicios" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="292.0" text="Has" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="310.0" text="Platos" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="274.0" text="Servicios" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="314.0" layoutY="292.0" text="Has" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="310.0" text="Empleados" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="510.0" layoutY="274.0" text="Productos" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="531.0" layoutY="292.0" text="Has" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="521.0" layoutY="310.0" text="Platos" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="48.0" fitWidth="50.0" layoutX="14.0" layoutY="12.0" onMouseClicked="#Return" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/REGRESAR.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gabrielfigueros.controller.TipoPlatoController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../img/FondoTipoPlato.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="57.0" layoutY="347.0" mnemonicParsing="false" onAction="#Nuevo" prefHeight="41.0" prefWidth="87.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TableView fx:id="tblTipoPlato" layoutX="118.0" layoutY="200.0" onMouseClicked="#seleccionarElemento" prefHeight="135.0" prefWidth="391.0">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoplato" prefWidth="86.0" text="ID" />
+          <TableColumn fx:id="colDescripcion" prefWidth="304.0" text="Descripción" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Button fx:id="btnEliminar" layoutX="185.0" layoutY="347.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="41.0" prefWidth="95.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEditar" layoutX="331.0" layoutY="347.0" mnemonicParsing="false" onAction="#Editar" prefHeight="41.0" prefWidth="95.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnReporte" layoutX="470.0" layoutY="347.0" mnemonicParsing="false" onAction="#Reporte" prefHeight="41.0" prefWidth="95.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label layoutX="185.0" layoutY="9.0" prefHeight="50.0" prefWidth="222.0" text="Tipo Plato" textAlignment="CENTER" textFill="#59d38c">
+         <font>
+            <Font name="Britannic Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="148.0" prefHeight="19.0" prefWidth="126.0" text="Descripción" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCodigoTipoplato" layoutX="69.0" layoutY="104.0" text="ID" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoTipoplato" layoutX="206.0" layoutY="105.0" promptText="ID" />
+      <TextField fx:id="txtDescripcion" layoutX="206.0" layoutY="157.0" promptText="Descripción Tipo Plato" />
+      <ImageView fitHeight="60.0" fitWidth="51.0" layoutX="6.0" layoutY="8.0" onMouseClicked="#Return" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/REGRESAR.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="97.0" fitWidth="95.0" layoutX="451.0" layoutY="58.0" onMouseClicked="#Plato" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/IconoPlato.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="471.0" layoutY="158.0" text="Plato" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

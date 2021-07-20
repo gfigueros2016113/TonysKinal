@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePresupuestoGF" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f00f9dcd-9238-4809-bea9-56f389bb2760">
+	<property name="ireport.zoom" value="0.8264462809917362"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="105"/>
+	<parameter name="CodEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\gabri\\OneDrive\\Documentos\\NetBeansProjects\\TonysKinalIN5BM2016113\\src\\org\\gabrielfigueros\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call Sp_Reporte_Presupuesto($P{CodEmpresa});]]>
+	</queryString>
+	<field name="codigoEmpresas" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicios" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="15" y="11" width="94" height="86" uuid="43c00916-dc6e-451e-8452-620036fa0fa6"/>
+				<imageExpression><![CDATA["C:\\Users\\gabri\\OneDrive\\Documentos\\NetBeansProjects\\TonysKinalIN5BM2016113\\src\\org\\gabrielfigueros\\img\\LOGO REPORTE.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="137" y="55" width="100" height="20" uuid="b816eb64-5bdd-472c-b356-018dd0fad1e2"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="14" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tony´s KINAL]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="752" height="98" uuid="bdd8a610-227a-424f-b620-4bb3184af166"/>
+				<imageExpression><![CDATA["C:\\Users\\gabri\\OneDrive\\Documentos\\NetBeansProjects\\TonysKinalIN5BM2016113\\src\\org\\gabrielfigueros\\img\\REPORTE ARRIBA.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="157" splitType="Stretch">
+			<textField>
+				<reportElement x="190" y="65" width="100" height="20" uuid="e6635ffe-b0a8-4667-b79e-d7f2d274b09b"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="85" width="100" height="20" uuid="61fd78d6-686f-4052-9c74-930b6b531610"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="105" width="100" height="20" uuid="663f1aaa-d169-4f65-91bc-b784d0abda8a"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="52" y="65" width="110" height="20" uuid="e9384f45-6ba8-4599-9895-5e5ecd51c577"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Nombre de Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="85" width="127" height="20" uuid="9d7d2462-a942-4d85-979e-4d42695d70f5"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Dirección de Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="105" width="124" height="20" uuid="53620966-cf61-4dfb-b619-dc54c247a5b5"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Teléfono de Empresa]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="392" y="47" width="271" height="74" uuid="b4cf8064-2d8e-47f7-a8f6-57769c84808f"/>
+				<subreportParameter name="CodEmpresa">
+					<subreportParameterExpression><![CDATA[$P{CodEmpresa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReportePresupuestoGF.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="194" y="12" width="386" height="35" uuid="91c09597-20cc-43b4-810f-c90dba2ec081"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="30" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE PRESUPUESTO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="15" y="17" width="727" height="23" backcolor="#FF00FF" uuid="39bccec7-7ae9-471a-a40c-a76417c963a5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="90" y="20" width="100" height="20" uuid="848210cb-b64f-4156-8de0-c9cc697587b0"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Fecha de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="20" width="100" height="20" uuid="2032688d-a6dc-402b-b74b-2154b20fe869"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Lugar de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="20" width="100" height="20" uuid="361ffa54-2c9b-44f1-a3bb-58415bf73a7c"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Hora de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="580" y="20" width="120" height="20" uuid="5ee1c8c1-1a97-455b-8642-081aefb1dd46"/>
+				<textElement>
+					<font fontName="Britannic Bold" size="12"/>
+				</textElement>
+				<text><![CDATA[Telefono de Contacto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="117" splitType="Stretch">
+			<line>
+				<reportElement x="32" y="51" width="692" height="1" uuid="59c8e7db-358d-4f0a-85b6-4445a1bc9172"/>
+			</line>
+			<textField>
+				<reportElement x="90" y="12" width="129" height="20" uuid="85ed2ad8-f377-409e-a47d-fff36d4350de"/>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="12" width="131" height="20" uuid="a6a99278-53f7-47ae-945f-badedf0fe777"/>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="12" width="135" height="20" uuid="245044d6-1557-4267-baa4-1bae5136ed33"/>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="580" y="12" width="144" height="20" uuid="a058b3a9-b791-40f4-8f4e-91c4391beeef"/>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="98" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="1" width="752" height="97" uuid="cae3caf5-55a3-42f8-b335-37c731dc1ac3"/>
+				<imageExpression><![CDATA["C:\\Users\\gabri\\OneDrive\\Documentos\\NetBeansProjects\\TonysKinalIN5BM2016113\\src\\org\\gabrielfigueros\\img\\REPORTE ABAJO.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gabrielfigueros.controller.AcercaDeController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="607.0">
+         <image>
+            <Image url="@../img/FONDO%20ACERCA%20DE.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="429.0" fitWidth="322.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FOTO%20PROFESIONAL.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#Return" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/REGRESAR.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="242.0" layoutY="39.0" text="PROGRAMADOR">
+         <font>
+            <Font name="Britannic Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="147.0" text="Gabriel Figueros Cardona" textFill="#a40606">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="305.0" layoutY="188.0" text="IN5BM    -    2016113" textFill="#a40606">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gabrielfigueros.controller.ModuloController">
+   <children>
+      <ImageView fitHeight="429.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/FONDO%20MODULOS.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="115.0" layoutX="24.0" layoutY="200.0" onMouseClicked="#ModuloEmpresa" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/IconoEmpresa.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="143.0" layoutX="167.0" layoutY="197.0" onMouseClicked="#Tipo_plato" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/IconoTipoPlato.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="115.0" fitWidth="103.0" layoutX="469.0" layoutY="206.0" onMouseClicked="#Productos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/IconoProductos.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="130.0" layoutX="316.0" layoutY="203.0" onMouseClicked="#TipoEmpleado" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/IconoTipoEmpledo.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="161.0" layoutY="33.0" nodeOrientation="LEFT_TO_RIGHT" text="MODULOS" textAlignment="CENTER">
+         <font>
+            <Font name="Britannic Bold" size="64.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="336.0" text="EMPRESAS" textFill="#fffafa">
+         <font>
+            <Font name="Britannic Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="348.0" text="PLATOS" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="355.0" layoutY="319.0" prefHeight="34.0" prefWidth="53.0" text="TIPO " textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="460.0" layoutY="336.0" text="PRODUCTOS" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="57.0" fitWidth="53.0" layoutX="7.0" layoutY="6.0" onMouseClicked="#Return" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/REGRESAR.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="324.0" layoutY="342.0" prefHeight="34.0" prefWidth="115.0" text="EMPLEADO" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="319.0" prefHeight="34.0" prefWidth="53.0" text="TIPO " textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

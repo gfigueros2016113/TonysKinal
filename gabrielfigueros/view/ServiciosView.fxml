@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gabrielfigueros.controller.ServiciosController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../img/FONDO%20SERVICIO.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="40.0" layoutY="350.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="43.0" prefWidth="97.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEliminar" layoutX="191.0" layoutY="350.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="43.0" prefWidth="97.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEditar" layoutX="347.0" layoutY="350.0" mnemonicParsing="false" onAction="#editar" prefHeight="43.0" prefWidth="90.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnReporte" layoutX="477.0" layoutY="350.0" mnemonicParsing="false" onAction="#GenerarReporte" prefHeight="43.0" prefWidth="97.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TableView fx:id="tblServicios" layoutX="30.0" layoutY="209.0" onMouseClicked="#seleccionarElemento" prefHeight="135.0" prefWidth="556.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="66.0" text="ID" />
+          <TableColumn fx:id="colFechaServicio" prefWidth="76.0" text="Fecha" />
+            <TableColumn fx:id="colTipoServicio" prefWidth="88.0" text="Tipo" />
+            <TableColumn fx:id="colHoraServicio" prefWidth="79.0" text="Hora" />
+            <TableColumn fx:id="colLugarServicio" prefWidth="82.0" text="Lugar" />
+            <TableColumn fx:id="colTelefonoContacto" text="Telefono" />
+            <TableColumn fx:id="colCodigoEmpresa" prefWidth="83.0" text="CodEmpresa" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Label layoutX="217.0" layoutY="14.0" prefHeight="48.0" prefWidth="203.0" text="Servicios" textFill="#971b1b">
+         <font>
+            <Font name="Britannic Bold" size="48.0" />
+         </font></Label>
+      <Label layoutX="52.0" layoutY="74.0" text="ID" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="320.0" layoutY="120.0" text="Fecha" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="54.0" layoutY="111.0" text="Tipo" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="320.0" layoutY="74.0" text="Telefono" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="320.0" layoutY="171.0" text="CodEmpresa" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="53.0" layoutY="146.0" text="Hora" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="54.0" layoutY="180.0" text="Lugar" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="txtCodigoServicio" layoutX="143.0" layoutY="70.0" promptText="ID" />
+      <TextField fx:id="txtTipoServicio" layoutX="143.0" layoutY="108.0" promptText="Ingresa Tipo Servicio" />
+      <TextField fx:id="txtHoraServicio" layoutX="143.0" layoutY="143.0" promptText="Hora, Ej: 12:00:00" />
+      <TextField fx:id="txtLugarServicio" layoutX="143.0" layoutY="177.0" promptText="Ingresa Lugar Servicio" />
+      <TextField fx:id="txtTelefonoContacto" layoutX="425.0" layoutY="70.0" promptText="Teléfono, Ej: 3232-3232" />
+      <ComboBox fx:id="cmbCodigoEmpresa" layoutX="427.0" layoutY="168.0" prefHeight="25.0" prefWidth="149.0" promptText="Seleccione ID Empresa">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <GridPane fx:id="grpFechaServicio" layoutX="427.0" layoutY="118.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </GridPane>
+      <ImageView fitHeight="43.0" fitWidth="54.0" layoutX="18.0" layoutY="14.0" onMouseClicked="#Return" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/REGRESAR.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

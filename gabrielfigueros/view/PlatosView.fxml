@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gabrielfigueros.controller.PlatoController">
+   <children>
+      <ImageView fitHeight="408.0" fitWidth="607.0">
+         <image>
+            <Image url="@../img/FONDO%20PLATOS.jpeg" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbTplato" layoutX="426.0" layoutY="159.0" prefWidth="150.0" promptText="Selecciona ID TP">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Button fx:id="btnNuevo" layoutX="50.0" layoutY="348.0" mnemonicParsing="false" onAction="#Nuevo" prefHeight="37.0" prefWidth="88.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnReporte" layoutX="456.0" layoutY="348.0" mnemonicParsing="false" onAction="#Reporte" prefHeight="37.0" prefWidth="88.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEditar" layoutX="324.0" layoutY="348.0" mnemonicParsing="false" onAction="#Editar" prefHeight="37.0" prefWidth="88.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEliminar" layoutX="190.0" layoutY="348.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="37.0" prefWidth="88.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TableView fx:id="tblPlatos" layoutX="14.0" layoutY="194.0" onMouseClicked="#seleccionarElementos" prefHeight="145.0" prefWidth="580.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="60.0" text="ID" />
+          <TableColumn fx:id="colCantidad" prefWidth="57.0" text="Cant." />
+            <TableColumn fx:id="colNombre" prefWidth="84.0" text="Nombre" />
+            <TableColumn fx:id="colDescripcion" prefWidth="259.0" text="Descripción" />
+            <TableColumn fx:id="colPrecio" prefWidth="58.0" text="Precio" />
+            <TableColumn fx:id="colTipo" prefWidth="61.0" text="Tipo" />
+            <TableColumn prefWidth="58.0" text="Precio" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtCodigo" layoutX="129.0" layoutY="86.0" promptText="ID" />
+      <TextField fx:id="txtNombre" layoutX="129.0" layoutY="159.0" promptText="Ingresa Nombre del Plato" />
+      <TextField fx:id="txtCantidad" layoutX="129.0" layoutY="121.0" promptText="Cantidad, Ej: 1500" />
+      <TextField fx:id="txtDescripcion" layoutX="426.0" layoutY="86.0" promptText="Ingresa Descripción del Plato" />
+      <TextField fx:id="txtPrecio" layoutX="426.0" layoutY="121.0" promptText="Precio, Ej: 1500" />
+      <Label fx:id="lblCodigo" layoutX="31.0" layoutY="89.0" text="ID" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="125.0" text="Cantidad" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="159.0" text="Nombre" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="90.0" text="Descripción" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="125.0" text="Precio" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="159.0" text="Tipo Plato" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="223.0" layoutY="29.0" text="Platos" textFill="#59d38c">
+         <font>
+            <Font name="Britannic Bold" size="59.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgReturn" fitHeight="47.0" fitWidth="52.0" layoutX="14.0" layoutY="12.0" onMouseClicked="#Return" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/REGRESAR.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

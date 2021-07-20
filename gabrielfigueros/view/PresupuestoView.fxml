@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gabrielfigueros.controller.PresupuestoController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../img/FONDO%20PRESUPUESTO.jpg" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="486.0" layoutY="87.0">
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <ComboBox fx:id="cmbCodigoEmpresas" layoutX="436.0" layoutY="77.0" prefHeight="25.0" prefWidth="148.0" promptText="Selecciona Empresa">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <TableView fx:id="tblPresupuesto" layoutX="94.0" layoutY="192.0" onMouseClicked="#seleccionarElemento" prefHeight="123.0" prefWidth="413.0">
+        <columns>
+          <TableColumn fx:id="colCodigoPresupuesto" prefWidth="60.0" text="ID" />
+            <TableColumn fx:id="colFechaSolicitud" prefWidth="127.0" text="Fecha Solicitud" />
+            <TableColumn fx:id="colCantidadPresupuesto" prefWidth="111.0" text="Presupuesto" />
+            <TableColumn fx:id="colCodigoEmpresa" prefWidth="111.0" text="CodigoEmpresa" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="41.0" layoutY="345.0" mnemonicParsing="false" onAction="#Nuevo" prefHeight="36.0" prefWidth="73.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEliminar" layoutX="187.0" layoutY="345.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="36.0" prefWidth="80.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEditar" layoutX="332.0" layoutY="346.0" mnemonicParsing="false" onAction="#Editar" prefHeight="36.0" prefWidth="80.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnReporte" layoutX="486.0" layoutY="342.0" mnemonicParsing="false" onAction="#Reporte" prefHeight="43.0" prefWidth="80.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="txtCodigoPresupuesto" layoutX="176.0" layoutY="76.0" prefHeight="25.0" prefWidth="123.0" promptText="ID" />
+      <TextField fx:id="txtCantidadPresupuesto" layoutX="176.0" layoutY="137.0" prefHeight="25.0" prefWidth="123.0" promptText="Cantidad, Ej: 1500" />
+      <Label layoutX="82.0" layoutY="79.0" prefHeight="17.0" prefWidth="25.0" text="ID">
+         <font>
+            <Font name="Britannic Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="83.0" layoutY="142.0" prefHeight="17.0" prefWidth="73.0" text="Cantidad ">
+         <font>
+            <Font name="Britannic Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="318.0" layoutY="81.0" prefHeight="17.0" prefWidth="108.0" text="Código Empresa">
+         <font>
+            <Font name="Britannic Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="318.0" layoutY="141.0" text="Fecha Solicitud">
+         <font>
+            <Font name="Britannic Bold" size="16.0" />
+         </font></Label>
+      <Label layoutX="191.0" layoutY="19.0" text="Presupuesto" textFill="WHITE">
+         <font>
+            <Font name="Britannic Bold" size="39.0" />
+         </font></Label>
+      <GridPane fx:id="grpFechaSolicitud" layoutX="436.0" layoutY="135.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </GridPane>
+      <ImageView fitHeight="54.0" fitWidth="48.0" layoutX="14.0" layoutY="15.0" onMouseClicked="#Return" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/REGRESAR.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
